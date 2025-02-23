@@ -10,13 +10,6 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   let frames = _____WB$wombat$assign$function_____("frames");
   let opener = _____WB$wombat$assign$function_____("opener");
 
-/* global screenReaderText */
-/**
- * Theme functions file.
- *
- * Contains handlers for navigation and widget area.
- */
-
 ( function( $ ) {
 	var body, masthead, menuToggle, siteNavigation, socialNavigation, siteHeaderMenu, resizeTimer;
 
@@ -213,23 +206,3 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 
 
 }
-/*
-     FILE ARCHIVED ON 13:49:06 Feb 24, 2023 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 14:37:29 Feb 22, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 0.482
-  exclusion.robots: 0.017
-  exclusion.robots.policy: 0.008
-  esindex: 0.01
-  cdx.remote: 10.504
-  LoadShardBlock: 103.56 (3)
-  PetaboxLoader3.datanode: 122.633 (4)
-  load_resource: 107.046
-  PetaboxLoader3.resolve: 73.812
-*/

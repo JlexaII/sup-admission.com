@@ -107,23 +107,3 @@ jQuery(document).ready(function ($) {
 });
 
 }
-/*
-     FILE ARCHIVED ON 19:25:34 Mar 18, 2021 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 14:37:29 Feb 22, 2025.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 0.659
-  exclusion.robots: 0.026
-  exclusion.robots.policy: 0.011
-  esindex: 0.013
-  cdx.remote: 21.214
-  LoadShardBlock: 282.078 (3)
-  PetaboxLoader3.datanode: 204.065 (4)
-  PetaboxLoader3.resolve: 334.41 (2)
-  load_resource: 300.873
-*/

@@ -4,9 +4,10 @@ const redirects = {
     "https://sup-admission.com/": "https://jlexaii.github.io/sup-admission.com/"
 };
 
+// Проверяем текущий URL
 const currentURL = window.location.href;
-const newURL = redirects[currentURL];
 
-if (newURL) {
-    window.location.replace(newURL); // 301 редирект (смена URL в истории браузера)
+// Если URL найден в списке, делаем редирект
+if (redirects[currentURL]) {
+    window.location.replace(redirects[currentURL]); // 301 редирект
 }

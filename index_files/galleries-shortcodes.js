@@ -1,0 +1,129 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+jQuery(document).ready(function ($) {
+	// Prepare items arrays for lightbox
+	$('.su-lightbox-gallery').each(function () {
+		var slides = [];
+		$(this).find('.su-slider-slide, .su-carousel-slide, .su-custom-gallery-slide').each(function (i) {
+			$(this).attr('data-index', i);
+			slides.push({
+				src: $(this).children('a').attr('href'),
+				title: $(this).children('a').attr('title')
+			});
+		});
+		$(this).data('slides', slides);
+	});
+	// Enable sliders
+	$('.su-slider').each(function () {
+		// Prepare data
+		var $slider = $(this);
+		// Apply Swiper
+		var $swiper = $slider.swiper({
+			wrapperClass: 'su-slider-slides',
+			slideClass: 'su-slider-slide',
+			slideActiveClass: 'su-slider-slide-active',
+			slideVisibleClass: 'su-slider-slide-visible',
+			pagination: '#' + $slider.attr('id') + ' .su-slider-pagination',
+			autoplay: $slider.data('autoplay'),
+			paginationClickable: true,
+			grabCursor: true,
+			mode: 'horizontal',
+			mousewheelControl: $slider.data('mousewheel'),
+			speed: $slider.data('speed'),
+			calculateHeight: $slider.hasClass('su-slider-responsive-yes'),
+			loop: true
+		});
+		// Prev button
+		$slider.find('.su-slider-prev').click(function (e) {
+			$swiper.swipeNext();
+		});
+		// Next button
+		$slider.find('.su-slider-next').click(function (e) {
+			$swiper.swipePrev();
+		});
+	});
+	// Enable carousels
+	$('.su-carousel').each(function () {
+		// Prepare data
+		var $carousel = $(this),
+			$slides = $carousel.find('.su-carousel-slide');
+		// Apply Swiper
+		var $swiper = $carousel.swiper({
+			wrapperClass: 'su-carousel-slides',
+			slideClass: 'su-carousel-slide',
+			slideActiveClass: 'su-carousel-slide-active',
+			slideVisibleClass: 'su-carousel-slide-visible',
+			pagination: '#' + $carousel.attr('id') + ' .su-carousel-pagination',
+			autoplay: $carousel.data('autoplay'),
+			paginationClickable: true,
+			grabCursor: true,
+			mode: 'horizontal',
+			mousewheelControl: $carousel.data('mousewheel'),
+			speed: $carousel.data('speed'),
+			slidesPerView: ($carousel.data('items') > $slides.length) ? $slides.length : $carousel.data('items'),
+			slidesPerGroup: $carousel.data('scroll'),
+			calculateHeight: $carousel.hasClass('su-carousel-responsive-yes'),
+			loop: true
+		});
+		// Prev button
+		$carousel.find('.su-carousel-prev').click(function (e) {
+			$swiper.swipeNext();
+		});
+		// Next button
+		$carousel.find('.su-carousel-next').click(function (e) {
+			$swiper.swipePrev();
+		});
+	});
+	// Enable lightbox
+	$('.su-lightbox-gallery').on('click', '.su-slider-slide, .su-carousel-slide, .su-custom-gallery-slide', function (e) {
+		e.preventDefault();
+		var slides = $(this).parents('.su-lightbox-gallery').data('slides');
+		$.magnificPopup.open({
+			items: slides,
+			type: 'image',
+			mainClass: 'mfp-img-mobile',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0, 1],
+				tPrev: su_magnific_popup.prev,
+				tNext: su_magnific_popup.next,
+				tCounter: su_magnific_popup.counter
+			},
+			tClose: su_magnific_popup.close,
+			tLoading: su_magnific_popup.loading
+		}, $(this).data('index'));
+	});
+});
+
+}
+/*
+     FILE ARCHIVED ON 19:25:34 Mar 18, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:37:29 Feb 22, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.659
+  exclusion.robots: 0.026
+  exclusion.robots.policy: 0.011
+  esindex: 0.013
+  cdx.remote: 21.214
+  LoadShardBlock: 282.078 (3)
+  PetaboxLoader3.datanode: 204.065 (4)
+  PetaboxLoader3.resolve: 334.41 (2)
+  load_resource: 300.873
+*/

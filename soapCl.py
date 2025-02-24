@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 
 # Указываем путь к файлу
-file_path = "2017tsm-t.html"
-new_file_path = "2017tsm-t_updated.html"
+file_path = "g-ea.html"
+new_file_path = "g-ea_updated.html"
 
 # Читаем HTML-файл
 with open(file_path, "r", encoding="utf-8") as file:

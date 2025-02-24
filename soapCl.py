@@ -1,17 +1,19 @@
-import re
+from bs4 import BeautifulSoup
 
-# Читаем содержимое HTML-файла
+# Указываем путь к файлу
 file_path = "2017trp.html"
+new_file_path = "2017trp_updated.html"
 
+# Читаем HTML-файл
 with open(file_path, "r", encoding="utf-8") as file:
-    html_content = file.read()
+    soup = BeautifulSoup(file, "html.parser")
 
-# Заменяем ссылки javascript:void(0); на #
-updated_html = re.sub(r'href=javascript:void\(0\);', 'href="#"', html_content)
+# Находим и заменяем все ссылки
+for a_tag in soup.find_all("a", href=True):
+    a_tag["href"] = "javascript:void(0);"
 
-# Сохраняем изменения в новом файле
-new_file_path = "index_updated.html"
+# Сохраняем изменения в новый файл
 with open(new_file_path, "w", encoding="utf-8") as file:
-    file.write(updated_html)
+    file.write(str(soup))
 
-print(f"Файл успешно обновлен и сохранен как {new_file_path}")
+print(f"✅ Файл обновлён: {new_file_path}")

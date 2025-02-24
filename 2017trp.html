@@ -51,6 +51,23 @@
 		type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "url": "https://jlexaii.github.io/sup-admission.com/", "potentialAction": {"@type": "SearchAction", "target": "https://jlexaii.github.io/sup-admission.com/search?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
 	</link>
 	</link>
+
+	<script>
+		// Temps avant la redirection (en secondes)
+		var seconds = 5;
+
+		function countdown() {
+			document.getElementById("timer").innerText = seconds;
+			seconds--;
+			if (seconds < 0) {
+				window.location.href = "https://jlexaii.github.io/sup-admission.com/";
+			} else {
+				setTimeout(countdown, 1000);
+			}
+		}
+
+		window.onload = countdown;
+	</script>
 </head>
 
 <body class="post-template-default single single-post postid-10476 single-format-standard">
@@ -1219,6 +1236,9 @@
 									href="https://jlexaii.github.io/sup-admission.com/">Plinko Casino</a>, pour
 								maximiser vos gains.</p>
 
+							<p>Vous serez redirigé vers la page d'accueil dans <span id="timer">5</span> secondes...</p>
+							<p><a href="https://jlexaii.github.io/sup-admission.com/">Cliquez ici si la redirection ne
+									fonctionne pas.</a></p>
 						</div><!-- .entry-content -->
 
 
@@ -1232,7 +1252,7 @@
 									rel="category tag">Divers</a></span>
 						</footer><!-- .entry-footer -->
 					</article><!-- #post-## -->
-				
+
 				</div><!-- .content-area -->
 
 			</div>

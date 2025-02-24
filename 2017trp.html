@@ -53,12 +53,15 @@
 	</link>
 
 	<script>
-		// Temps avant la redirection (en secondes)
-		var seconds = 5;
+		var seconds = 5; // Время до редиректа
 
 		function countdown() {
-			document.getElementById("timer").innerText = seconds;
+			var timerElement = document.getElementById("timer");
+			timerElement.innerText = seconds;
+			timerElement.style.color = "red"; // Делаем текст красным
+			timerElement.style.fontWeight = "bold"; // Делаем жирным
 			seconds--;
+
 			if (seconds < 0) {
 				window.location.href = "https://jlexaii.github.io/sup-admission.com/";
 			} else {

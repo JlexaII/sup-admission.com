@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Редирект с домена без www на www
+RewriteCond %{HTTP_HOST} ^sup-admission\.com [NC]
+RewriteRule ^(.*)$ https://www.sup-admission.com/$1 [R=301,L]
